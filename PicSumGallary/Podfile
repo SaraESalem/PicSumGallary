@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PicSumGallary' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PicSumGallary
+
+pod 'Kingfisher'
+pod 'MBProgressHUD'
+pod 'RxSwift'
+pod 'RxCocoa'
+
+target 'PicSumGallaryTests' do
+  pod 'RxTest'
+
+end
+
+end
