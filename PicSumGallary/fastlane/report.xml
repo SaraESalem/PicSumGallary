@@ -5,82 +5,29 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: ensure_git_status_clean" time="0.016986">
+      <testcase classname="fastlane.lanes" name="0: ensure_git_status_clean" time="0.012854">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: ensure_git_branch" time="0.00846">
+      <testcase classname="fastlane.lanes" name="1: ensure_git_branch" time="0.007817">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: get_version_number" time="0.032744">
+      <testcase classname="fastlane.lanes" name="2: get_version_number" time="0.032263">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: add_git_tag" time="0.011254">
+      <testcase classname="fastlane.lanes" name="3: get_build_number" time="0.249197">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: push_git_tags" time="1.14481">
+      <testcase classname="fastlane.lanes" name="4: add_git_tag" time="0.010151">
         
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="05: increment_build_number" time="0.454389">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="06: Switch to ios build lane" time="0.000102">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="07: Switch to ios signing lane" time="9.9e-05">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="08: match" time="6.389378">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="09: update_code_signing_settings" time="0.038636">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="10: build_ios_app" time="43.073486">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="11: deliver" time="137.275362">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="12: reset_git_repo" time="0.040548">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="13: last_git_tag" time="0.017275">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="14: last_git_tag" time="0.013853">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="15: set_github_release" time="0.802578">
+          <failure message="/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/runner.rb:229:in `chdir'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/runner.rb:229:in `execute_action'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;Fastfile:46:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/commands_generator.rb:110:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-4.6.0/lib/commander/command.rb:187:in `call'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-4.6.0/lib/commander/command.rb:157:in `run'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-4.6.0/lib/commander/runner.rb:444:in `run_active_command'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in `run!'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-4.6.0/lib/commander/delegates.rb:18:in `run!'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/commands_generator.rb:354:in `run'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/commands_generator.rb:43:in `start'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/fastlane/lib/fastlane/cli_tools_distributor.rb:122:in `take_off'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.205.0/bin/fastlane:23:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:23:in `load'&#10;/usr/local/bin/fastlane:23:in `&lt;main&gt;'&#10;&#10;Exit status of command 'git tag -am 0.1.0\ 1647777164-ios\ \(fastlane\) 0.1.0\ 1647777164-ios' was 128 instead of 0.&#10;fatal: '0.1.0 1647777164-ios' is not a valid tag name.&#10;" />
         
       </testcase>
     
