@@ -1,0 +1,63 @@
+fastlane_require "dotenv"
+
+before_all do
+  UI.important "Loading secret environment variables"
+  Dotenv.load "/Users/sarasalem/Documents/MyApps/fastlane/.env.secret"
+end
+
+desc "Create app on developer portal and App Store Connect if needed"
+lane :create_app do
+  produce
+end
+
+platform :ios do
+
+  before_all do
+    UI.important "Loading iOS environment variables"
+    Dotenv.load ".env.ios"
+  end
+
+  desc "Bump version"
+  lane :bump do
+    increment_version_number(version_number: UI.input("Version number:"))
+  end
+
+  desc "(1) Sync signing"
+  lane :signing do
+    match   #sync_code_signing  dist.cer && pp
+    mapping = Actions.lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
+    #do change on xcode we should do git rest or ignore this changes after release is done
+    update_code_signing_settings(
+      profile_name: mapping[ENV['MATCH_APP_IDENTIFIER']]
+    )
+  end
+
+  desc "(2) Build binary"
+  lane :build do
+    signing
+    build_ios_app #gym
+  end
+
+  desc "(3) Release binary"
+  lane :release do
+    ensure_git_status_clean
+    ensure_git_branch
+
+    add_git_tag(tag: "#{get_version_number}-ios")
+    push_git_tags
+
+    increment_build_number(build_number: Time.now.to_i)
+
+    build
+    deliver #upload_to_app_store
+
+    reset_git_repo
+
+    set_github_release(
+      name: last_git_tag,
+      tag_name: last_git_tag,
+      description: ""
+    )
+  end
+
+end

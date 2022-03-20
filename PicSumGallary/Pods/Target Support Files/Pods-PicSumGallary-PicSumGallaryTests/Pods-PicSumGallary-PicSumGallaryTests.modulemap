@@ -1,0 +1,6 @@
+framework module Pods_PicSumGallary_PicSumGallaryTests {
+  umbrella header "Pods-PicSumGallary-PicSumGallaryTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
