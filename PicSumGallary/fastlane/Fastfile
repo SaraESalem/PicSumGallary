@@ -43,7 +43,7 @@ platform :ios do
     ensure_git_status_clean
     ensure_git_branch
 
-    add_git_tag(tag: "#{get_version_number}-ios")
+    add_git_tag(tag: "#{get_version_number} #{get_build_number}-ios")
     push_git_tags
 
     increment_build_number(build_number: "3")
